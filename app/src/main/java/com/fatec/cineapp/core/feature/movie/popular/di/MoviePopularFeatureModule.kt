@@ -5,6 +5,8 @@ import com.fatec.cineapp.core.feature.movie.popular.data.repository.MoviePopular
 import com.fatec.cineapp.core.feature.movie.popular.data.source.MoviePopularRemoteDataSourceImpl
 import com.fatec.cineapp.core.feature.movie.popular.domain.repository.MoviePopularRepository
 import com.fatec.cineapp.core.feature.movie.popular.domain.source.MoviePopularRemoteDataSource
+import com.fatec.cineapp.core.feature.movie.popular.domain.usecase.GetPopularMoviesUseCase
+import com.fatec.cineapp.core.feature.movie.popular.domain.usecase.GetPopularMoviesUseCaseImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,6 +27,12 @@ object MoviePopularFeatureModule {
     @Singleton
     fun provideMovieRepository(remoteDataSource: MoviePopularRemoteDataSource): MoviePopularRepository {
         return MoviePopularRepositoryImpl(remoteDataSource)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetMoviesPopularUseCase(movieRepository: MoviePopularRepository): GetPopularMoviesUseCase{
+        return GetPopularMoviesUseCaseImpl(repository = movieRepository)
     }
 
 }
