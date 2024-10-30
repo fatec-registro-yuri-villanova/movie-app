@@ -1,16 +1,15 @@
 package com.fatec.cineapp.core.presentation
 
-import BottomNavigationBar
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.fatec.cineapp.core.presentation.navigation.NavigationGraph
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -19,13 +18,8 @@ fun MainScreen(
 ) {
     Scaffold(
         Modifier.padding(top = 16.dp),
-        bottomBar = {
-            BottomNavigationBar(navController)
-        },
         content = {
-            NavigationGraph(
-                navController = navController
-            )
+            Text("Main Screen")
         }
     )
 }
