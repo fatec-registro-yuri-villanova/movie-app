@@ -1,4 +1,4 @@
-package com.fatec.cineapp.core.presentation.components
+package com.fatec.cineapp.core.feature.movie.popular.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

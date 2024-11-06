@@ -1,4 +1,4 @@
-package com.fatec.cineapp.core.presentation.components
+package com.fatec.cineapp.core.feature.movie.popular.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
