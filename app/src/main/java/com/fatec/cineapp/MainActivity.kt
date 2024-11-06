@@ -9,7 +9,7 @@ import com.fatec.cineapp.core.presentation.MainScreen
 import com.fatec.cineapp.ui.theme.CineAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     val apiKey = BuildConfig.API_KEY
     override fun onCreate(savedInstanceState: Bundle?) {
