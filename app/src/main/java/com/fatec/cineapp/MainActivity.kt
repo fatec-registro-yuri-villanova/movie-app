@@ -14,7 +14,6 @@ class MainActivity : ComponentActivity() {
     val apiKey = BuildConfig.API_KEY
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             CineAppTheme {
                 MainScreen(navController = rememberNavController())

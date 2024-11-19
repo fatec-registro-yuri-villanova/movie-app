@@ -18,7 +18,6 @@ fun MainScreen(
     navController: NavHostController
 ) {
     Scaffold(
-        Modifier.padding(top = 16.dp),
         bottomBar = {
             BottomNavigationBar(navController)
         },
